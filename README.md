@@ -21,10 +21,13 @@ var fu = FileUtil();
 #### Get files using a glob-like pattern
 ```javascript
 var files = fu.getFilesByGlob("/path/to/some/?older/file.*");
-  files.forEach(function(file){
+
+// files is an array of File
+files.forEach(function(file){
   var str = file.getBlob().getDataAsString(); 
   Logger.log(str).
 });
+
 ```
 
 #### Get an array of Files by path
